@@ -2,8 +2,8 @@
 
 const express = require("express");
 const app = express();
-const port = 8080; //If port 5500 is in use, Live Server checks for the next available port to use
-app.use(express.static("./public")); //Static files are files that are going to be on the front-end
+const port = 8080;
+app.use(express.static("./public")); 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.listen(port, () => {

@@ -4,13 +4,23 @@
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
-  }
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrhankins883/the-quote-card-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jrhankins883/the-quote-card-express/issues"
+  },
+  "homepage": "https://github.com/jrhankins883/the-quote-card-express#readme"
 }

@@ -1,60 +1,44 @@
-body, html {
-    height: 100vh;
-    overflow: hidden;
-    background: 
-        radial-gradient(circle at 40% 15%, #dc22ba 0%, transparent 40%),
-        linear-gradient(to top, #1a001a 0%, #330033 60%, #3d004d 100%);
-
+.background-img {
+    background-image: url("../img/pikes-peak3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 70vh;
+    z-index: -1;
+    border-radius: 10px;
 }
 
-article {
-    height: 75vh;
-    width: 75vw;
-    margin: auto;
-    margin-top: 75px;
-    box-sizing: border-box;
-    border: 3px solid white;
-    
+main {
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
 
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 40px;
-    text-align: center;
+.quote-text {
+    font-size: 2rem;
+    font-weight: bold;
     color: white;
-}
-
-q {
+    line-height: 1.5;
     display: block;
-    position: relative;
-    quotes: "\201D" "\201E";
-}
-q::before {
-    position: absolute;
-    top: -5.5rem;
-    left: -3.5rem;
-    font-size: 4rem;
-    font-weight: bold;
-    transform: rotate(180deg);    
-}
-q::after {
-    position: absolute;
-    bottom: -5.5rem;
-    right: -2.5rem;
-    font-size: 4rem;
-    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    max-width: 30ch;
 }
 
 .author-text {
-    font-size: 20px;
+    font-size: 1rem;
+    font-style: italic;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
 }
-.quote-text {
-    max-width: 30ch;
-    line-height: 1.7;
-}
-
-div {
-    background-image: url("../img/mitchell-luo-FWoq_ldWlNQ-unsplash.jpg")
-};
