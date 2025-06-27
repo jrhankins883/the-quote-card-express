@@ -45,24 +45,25 @@ function loopThroughQuotes() {
     }, 3000);
 }
 
-setTimeout(loopThroughQuotes, 3000);
+setTimeout(loopThroughQuotes, 3000);*/
 
-/*async function getRandomImage() {
-    const CLIENT_ID="TDyWGEBQtaHAHy9IU7Gq9P6AaC-QzuxGqKst0Z0DV5c";
-    const endPoint = `https://api.unsplash.com/photos/random/?client_id=${CLIENT_ID}`;
+async function getRandomImage() {
+    const endpoint = "http://localhost:8080/api/v1/getRandomImage";
     try {
-        const response = await fetch(endPoint);
+        const response = await fetch(endpoint);
         const returnedData = await response.json();
-        const receivedPhotoUrl = returnedData.urls.regular;
+        const receivedPhotoUrl = returnedData.data;
 
         const imgDiv = document.querySelector(".background-img");
-        imgDiv.style.backgroundImage = `url("${receivedPhotoUrl}")`;
+        imgDiv.style.backgroundImage = `url(${receivedPhotoUrl})`;
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
 }
 
-Here we are creating an asynchronous function that will make our request to the Unsplash API. First, we create a variable to hold our API key.
+getRandomImage();
+
+/*Here we are creating an asynchronous function that will make our request to the Unsplash API. First, we create a variable to hold our API key.
 Next we declare a variable to hold the endpoint that we will be touching with our fetch request. Notice that we use string interpolation here. 
 Having both the endpoint with our key results in a long, ugly string. Plugging in our client id with string interpolation makes it cleaner and 
 easily readable.
@@ -76,6 +77,3 @@ of the Request interface reads the request body and returns it as a promise that
 It is an asynchronous function as well, so we need the await keyword when invoking the method. The end result is that we will receive a JavaScript 
 object if the promise resolved and store it inside returnedData. To see if we are receiving any data at a quick glance or check for errors with 
 our JavaScript, let's log the returned data.*/
-
-getRandomImage();
-
