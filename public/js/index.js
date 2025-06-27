@@ -45,9 +45,9 @@ function loopThroughQuotes() {
     }, 3000);
 }
 
-setTimeout(loopThroughQuotes, 3000);*/
+setTimeout(loopThroughQuotes, 3000);
 
-async function getRandomImage() {
+/*async function getRandomImage() {
     const CLIENT_ID="TDyWGEBQtaHAHy9IU7Gq9P6AaC-QzuxGqKst0Z0DV5c";
     const endPoint = `https://api.unsplash.com/photos/random/?client_id=${CLIENT_ID}`;
     try {
@@ -62,7 +62,7 @@ async function getRandomImage() {
     }
 }
 
-/*Here we are creating an asynchronous function that will make our request to the Unsplash API. First, we create a variable to hold our API key.
+Here we are creating an asynchronous function that will make our request to the Unsplash API. First, we create a variable to hold our API key.
 Next we declare a variable to hold the endpoint that we will be touching with our fetch request. Notice that we use string interpolation here. 
 Having both the endpoint with our key results in a long, ugly string. Plugging in our client id with string interpolation makes it cleaner and 
 easily readable.
